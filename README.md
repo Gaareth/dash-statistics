@@ -8,7 +8,7 @@ Therefore the ultimate goal is a dashboard where selecting different data inputs
 
 ## Design Example
 <img src="https://i.imgur.com/hIsmdE9.png" alt="Design example 1" width=960 height=auto>
-<img src="https://i.imgur.com/otKYm62.png" alt="Design example 2" width=1080 height=auto>
+<img src="https://i.imgur.com/otKYm62.png" alt="Design example 2" width=960 height=auto>
 
 
 ## Installing
@@ -36,6 +36,19 @@ def index():
 if __name__ == "__main__":
     app.run("0.0.0.0", port=5000)
 
+```
+
+## Proxy
+
+Running flask behind some webserver like Heroku will probably not give you the actual IP Address of the user. <br>
+This maybe fixes this
+
+```python
+from Dash_statistics.statistics import DashStatistics
+from werkzeug.middleware.proxy_fix import ProxyFix
+
+app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app)
 ```
 
 ## TODO
