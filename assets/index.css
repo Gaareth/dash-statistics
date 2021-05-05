@@ -1,0 +1,106 @@
+.centered_div {
+    display: flex;
+    justify-content: center;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.dash-graph {
+    height: 90%;
+}
+
+.search_section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search_section > input {
+    flex: 0 0 25%;
+}
+.search_section > #update-button {
+
+}
+
+.input-form {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.input-form-column {
+        width: 100%;
+       padding-right: 5px;
+       padding-left: 5px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .input-form-column {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.input-form-submit {
+    display: flex;
+    align-items: flex-end !important;
+}
+
+#page-content {
+    background-color: #F9F9F9;
+}
+
+#basic_stats_container > .col-sm > .card > .card-body > .card-text {
+    color: #565656;
+}
+
+#basic_stats_container > .col-sm > .card > .card-body > .card-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 1100px) {
+    #basic_stats_container {
+        width: 70%;
+    }
+}
+
+
+/* The pie charts seem to overflow sometimes, adding more padding seems to fix this */
+@media screen and (min-width: 768px) and (max-width: 1340px) {
+    #basic_stats_charts > div > .card > .card-body {
+        padding-bottom: 5rem;
+    }
+}
+
+#basic_stats {
+        display: flex;
+        justify-content: center;
+ }
+
+.card {
+    margin: 25px 0;
+}
+
+.drop-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
